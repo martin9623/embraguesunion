@@ -1,0 +1,26 @@
+//PRODUCTOS--------
+
+.productos {
+  @include default__page();
+
+  &__galeria {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    &__img {
+      max-height: 150px;
+      margin: 20px 0;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .productos {
+    @include default__page();
+
+    &__galeria {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 50px 0;
+    }
+  }
+}

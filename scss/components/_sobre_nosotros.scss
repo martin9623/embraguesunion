@@ -1,0 +1,44 @@
+//SOBRE-NOSOTROS--------
+
+.sobre_nosotros {
+  @include default__page();
+
+  &__contenedor {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    @include card;
+    margin: 0 auto;
+
+    &__img {
+      max-width: 500px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    &__texto {
+      padding: 10px;
+      &__titulo {
+        padding: 10px 0;
+      }
+      &__lista {
+        &__item {
+          list-style: inside;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .sobre_nosotros {
+    &__contenedor {
+      flex-direction: row;
+      max-width: 100%;
+      &__texto__lista__item {
+        padding: 25px 0;
+      }
+    }
+  }
+}

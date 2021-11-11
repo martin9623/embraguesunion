@@ -1,0 +1,44 @@
+//INICIO--------
+
+.inicio {
+  //background
+  background: linear-gradient(#000000d2, #000000f3), url(/img/bgHome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  //inicio
+  min-height: $min-h;
+  display: flex;
+  align-items: center;
+
+  &__texto {
+    max-width: $max-w;
+    width: 100%;
+    margin: 0 auto;
+    font-family: $neue;
+    padding-left: 20px;
+
+    &__titulo {
+      color: map-get($color, blanco);
+      font-size: 3rem;
+      padding: 5px 0;
+    }
+
+    &__subtitulo {
+      color: map-get($color, blanco);
+      font-size: 2rem;
+      padding: 5px 0;
+    }
+
+    &__contacto {
+      width: max-content;
+      padding: 10px 0;
+
+      &__link {
+        @include links(map-get($color, blanco), map-get($color, azul));
+        font-size: 2rem;
+      }
+    }
+  }
+}
