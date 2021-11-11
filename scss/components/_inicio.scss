@@ -38,6 +38,13 @@
       &__link {
         @include links(map-get($color, blanco), map-get($color, azul));
         font-size: 2rem;
+        transition: 0.2s;
+        &:hover {
+          @include animacion__links(
+            map-get($color, azul),
+            map-get($color, blanco)
+          );
+        }
       }
     }
   }
