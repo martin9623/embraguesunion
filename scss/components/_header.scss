@@ -1,9 +1,11 @@
 //HEADER-------
 
 .header {
+  position: relative;
   display: flex;
   justify-content: center;
   background: map-get($color, bg);
+  z-index: 1000;
   &__nav {
     display: inherit;
     justify-content: space-between;
@@ -23,6 +25,10 @@
           line-height: 1rem;
           font-family: $neue;
           height: max-content;
+          margin: 0;
+        }
+        &:hover {
+          color: map-get($color, negro);
         }
       }
     }

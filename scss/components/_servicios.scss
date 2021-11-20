@@ -1,45 +1,13 @@
-//SERVICIOS--------
+//SERVICIOS
 
-.servicios {
-  @include default__page();
-
-  &__galeria {
-    display: grid;
-    justify-items: center;
-    &__contenedor {
-      @include card;
-      &__img {
-        max-width: 300px;
-        object-fit: cover;
-      }
-
-      &__titulo {
-        max-width: 280px;
-        padding: 10px;
-      }
-      &__link {
-        display: block;
-        width: max-content;
-        margin: 10px;
-        @include links(map-get($color, blanco), map-get($color, azul));
-
-        &:hover {
-          @include animacion__links(
-            map-get($color, azul),
-            map-get($color, blanco)
-          );
-        }
-      }
-    }
-  }
+.fa-cog,
+.fa-ellipsis-v {
+  color: map-get($color, azul);
 }
 
-@media (min-width: 769px) {
-  .servicios {
-    &__galeria {
-      display: grid;
-      justify-items: center;
-      grid-template-columns: repeat(3, 1fr);
-    }
+.btn-servicios {
+  background: map-get($color, azul);
+  &:hover {
+    @include animacion__links(map-get($color, azul), map-get($color, blanco));
   }
 }

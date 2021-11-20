@@ -6,22 +6,9 @@
   cursor: pointer;
 }
 
-@mixin default__page {
-  max-width: $max-w;
-  min-height: $min-h;
-  margin: 0 auto;
-}
-
 @mixin links($color, $bg) {
   color: $color;
   background: $bg;
   padding: 10px;
   border-radius: 5px;
-}
-
-@mixin card {
-  border: 3px solid #00000030;
-  border-radius: 5px;
-  margin: 10px 0;
-  overflow: hidden;
 }
